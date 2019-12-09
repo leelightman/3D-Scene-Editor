@@ -1,11 +1,11 @@
-## CS-GY 6533   Assignment 3
+## 3D scene editor
 
-Lynn Li (`ml6589`)
+Lynn Li
 
 **<u>Compilation Instruction</u>**
 
 ```
-cd Assignment_2
+cd 3D-Scene-Editor
 mkdir build
 cd build
 cmake -DCMAKE_BUILD_TYPE=Release ../ 
