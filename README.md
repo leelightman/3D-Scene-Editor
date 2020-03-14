@@ -124,11 +124,11 @@ void load_VBO(string filename,MatrixXf &V_obj,MatrixXf &V_obj_f_v, MatrixXi &ele
 ```
 void add_object(int object_enum){...};
 ```
-![](../screenshot/1.png)
+![](screenshot/1.png)
 
-![](../screenshot/2.png)
+![](screenshot/2.png)
 
-![](../screenshot/3.png)
+![](screenshot/3.png)
 
 9. Initiate 3 VAO for each type of object. Call VAO, and draw corresponding meshes.
 
@@ -146,13 +146,13 @@ void rotate_model(Model &model,int degree){...};
 void delete_model(Model &model){...};
 ```
 
-![](../screenshot/4.png)
+![](screenshot/4.png)
 
-![](../screenshot/5.png)
+![](screenshot/5.png)
 
-![](../screenshot/6.png)
+![](screenshot/6.png)
 
-![](../screenshot/11.png)
+![](screenshot/11.png)
 2. Change uniform "color" everytime the model is being selected
 3. Wireframe mode: use VBO_F_V and VBO_N2, VBO_N2 is calculated with following functions. 
 ```
@@ -170,9 +170,9 @@ glDrawArrays(GL_TRIANGLES,0,V_cube_f_v.cols());
 glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 ```
 
-![](../screenshot/7.png)
+![](screenshot/7.png)
 
-![](../screenshot/10.png)
+![](screenshot/10.png)
 
 4. Flat shading mode: use VBO_F_V and VBO_N2
 
@@ -183,9 +183,9 @@ glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 glDrawArrays(GL_TRIANGLES,0,V_cube_f_v.cols());
 ```
 
-![](../screenshot/6.png)
+![](screenshot/6.png)
 
-![](../screenshot/5.png)
+![](screenshot/5.png)
 
 5. Phong mode: use VBO and VBO_N. VBO_N is calculated with following functions
 
@@ -199,9 +199,9 @@ glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 glDrawArrays(GL_TRIANGLES,0,V_cube_f_v.cols());
 ```
 
-![](../screenshot/8.png)
+![](screenshot/8.png)
 
-![](../screenshot/9.png)
+![](screenshot/9.png)
 
 6. Object selection: use view\*model\*each vertex to bring vertex to camera space. use projection.inverse() and bring cursor position to camera space. Then use ray tracing to implement object selection. Since it's in camera space, ray's z is always -1.0.
 
@@ -248,7 +248,7 @@ case pers:
   break;
 ```
 
-![](../screenshot/12.png)
+![](screenshot/12.png)
 
 3. Trackball Camera: Update camera position 
 
@@ -258,7 +258,7 @@ camY = sin(ychange) * radius;
 camZ = cos(xchange)*cos(ychange) * radius;
 ```
 
-![](../screenshot/13.png)
+![](screenshot/13.png)
 
-![](../screenshot/14.png)
+![](screenshot/14.png)
 
